@@ -1,0 +1,28 @@
+{
+  "name": "learn-mongoose",
+  "version": "0.0.1",
+  "description": "learn mongoose project",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.16",
+    "morgan": "^1.10.0",
+    "nunjucks": "^3.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/griffinna/learn-mongoose.git"
+  },
+  "author": "griffinna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/griffinna/learn-mongoose/issues"
+  },
+  "homepage": "https://github.com/griffinna/learn-mongoose#readme"
+}

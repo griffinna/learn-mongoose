@@ -125,3 +125,9 @@ WriteResult({ "nInserted" : 1 })
 > db.users.update({ name: 'rio'}, { $set: {comment: 'hello update commnet!'}});
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 ```
+
+4. Detele (삭제)
+```console
+> db.users.remove({name: 'griffin'});
+WriteResult({ "nRemoved" : 1 })
+```

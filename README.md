@@ -131,3 +131,9 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 > db.users.remove({name: 'griffin'});
 WriteResult({ "nRemoved" : 1 })
 ```
+
+# mongoose
+ODM (Object Document Mapping) : 몽고디비는 릴레이션이 아닌 다큐먼트를 사용
+
+- 스키마 (Schema) : 몽고디비에 데이터를 넣기 전에 노드 서버 단에서 데이터를 한번 필터링
+- populate : MySQL 의 JOIN 기능과 유사, 관계가 있는 데이터를 쉽게 가져올 수 있음

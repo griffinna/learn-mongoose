@@ -115,5 +115,13 @@ WriteResult({ "nInserted" : 1 })
 - skip
 ```console
 > db.users.find({}, {_id: 0, name: 1, age: 1}).sort({age:-1}).limit(1).skip(1);
-{ "name" : "rio", "age" : 30 
+{ "name" : "rio", "age" : 30 }
+```
+
+3. Update (수정)
+> $set  
+이 연산자를 사용하지 않고 일반 객체를 넣으면 통째로 update 됨
+```console
+> db.users.update({ name: 'rio'}, { $set: {comment: 'hello update commnet!'}});
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 ```

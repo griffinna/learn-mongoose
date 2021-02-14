@@ -137,3 +137,7 @@ ODM (Object Document Mapping) : 몽고디비는 릴레이션이 아닌 다큐먼
 
 - 스키마 (Schema) : 몽고디비에 데이터를 넣기 전에 노드 서버 단에서 데이터를 한번 필터링
 - populate : MySQL 의 JOIN 기능과 유사, 관계가 있는 데이터를 쉽게 가져올 수 있음
+
+## 몽고디비 연결
+- 주소형식
+>mongodb://[username:password@]host[:port][/[database][?options]]

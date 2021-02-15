@@ -18,10 +18,10 @@ router.post('/', async (req, res, next) => {
     }
 });
 
-router.route('/')
+router.route('/:id')
     .patch(async (req, res, next) => {
         try {
-            const result = await Comment.updateone({
+            const result = await Comment.updateOne({
                 _id: req.params.id,
             }, {
                 comment: req.body.comment,

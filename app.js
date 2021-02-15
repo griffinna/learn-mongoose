@@ -5,6 +5,11 @@ const nunjucks = require('nunjucks');
 
 const connect = require('./schemas');
 
+// 라우터 연결
+const indexRouter = require('./routes');
+const usersRouter = require('./routes/users');
+const commentsRouter = require('./routes/comments');
+
 const app = express();
 app.set('port', process.env.PORT || 3002);
 app.set('view engine', 'html');
@@ -18,6 +23,11 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// 라우터 연결
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/comments', commentsRouter);
 
 app.use((err, req, res, next) => {
     res.locals.message = err.message;

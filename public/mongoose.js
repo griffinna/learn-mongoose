@@ -1,5 +1,5 @@
 // 사용자 이름을 클릭할 때 댓글 로딩
-document.querySelector('#user-list tr').forEach((el) => {
+document.querySelectorAll('#user-list tr').forEach((el) => {
     el.addEventListener('click', function() {
         const id = el.querySelector('td').textContent;
         getComment(id);
@@ -12,7 +12,7 @@ async function getUser(){
         const res = await axios.get('/users');
         const users = res.data;
         console.log(users);
-        const body = document.querySelector('#user-list tbody');
+        const tbody = document.querySelector('#user-list tbody');
         tbody.innerHTML = '';
         users.map(function(user){
             const row = document.createElement('tr');
